@@ -1,3 +1,7 @@
-Sample Text
+## Team Codename : TBA
 
-branch master security check
+## Group Members : Kwaku Asare, Joseluis Sierra, Braenaan Vaughan.
+
+## Project Title : TBA
+
+## Prokect Descriptions : TBA
