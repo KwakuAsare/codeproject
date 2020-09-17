@@ -1,80 +1,116 @@
-var factOfTheDay = "09/14";
-var userBirthDay = "11/15";
-var graduationDate = "01/25";
-var favoriteNumber = "37";
-var houseNumber = "183";
-var randomFact = "5555";
-var randomDate = "11/16";
+var userBirthDay = "";
+var graduationDate = "";
+var favoriteNumber = "";
+var houseNumber = "";
+var areaCode = "";
+var shoeSize = "";
 
-var factOfTheDayURL = "http://numbersapi.com/" + factOfTheDay +"/date";
-var birthdayURL = "http://numbersapi.com/" + userBirthDay +"/date";
-var graduationURL = "http://numbersapi.com/" + graduationDate + "/date";
-var favNumberURL = "http://numbersapi.com/" + favoriteNumber + "/trivia";
-var houseNumberURL = "http://numbersapi.com/" + houseNumber + "/trivia";
-var randomFactURL = "http://numbersapi.com/" + randomFact + "/trivia";
-var randomDateURL = "http://numbersapi.com/" + randomDate + "/date";
-var movieURL = "http://www.omdbapi.com/?y=1996&apikey=812d8551";
 
-$.ajax({
-    url: factOfTheDay,
-    method: "GET"
-}).then(function(response){
-    // add functions for numbers!!
-    console.log(response);
-})
 
-$.ajax({
-    url: birthdayURL,
-    method: "GET"
-}).then(function(response){
-    // add functions for numbers!!
-    console.log(response);
-})
+$(".button").click(function generateFacts(e){
+    e.preventDefault();
+    $(.Numbers).hide();
 
-$.ajax({
-    url: graduationURL,
-    method: "GET"
-}).then(function(response){
-    // add functions for numbers!!
-    console.log(response);
-})
+function birthdayFact(){
+    $(document).ready(function(){
+        userBirthDay = $("#userBirthday").val();
+        var birthdayURL = "http://numbersapi.com/" + userBirthDay +"/date";
+        $.ajax({
+            url: birthdayURL,
+            method: "GET"
+        }).then(function(response){
+            var bHTMLHead = "<h4>Here's something that happened on your birthday in history:</h4>";
+            var data = response;
+            $(document.body).append(bHTMLHead,data);
+        })
+    })
+};
 
-$.ajax({
-    url: favNumberURL,
-    method: "GET"
-}).then(function(response){
-    // add functions for numbers!!
-    console.log(response);
-})
+function graduationFact(){
+    $(document).ready(function(){
+        graduationDate = $("#userGradYear").val();
+        var graduationURL = "http://numbersapi.com/" + graduationDate + "/year";
+        $.ajax({
+            url: graduationURL,
+            method: "GET"
+        }).then(function(response){
+            var bHTMLHead = "<h4>Here's something that happened the year you graduated!</h4>";
+            var data = response;
+            $(document.body).append(bHTMLHead,data);
+        })
+    })
+};
 
-$.ajax({
-    url: houseNumberURL,
-    method: "GET"
-}).then(function(response){
-    // add functions for numbers!!
-    console.log(response);
-})
+function favoriteNumberFact(){
+    $(document).ready(function(){
+        favoriteNumber = $("#userFavNum").val();
+        var favNumberURL = "http://numbersapi.com/" + favoriteNumber + "/trivia";
+        $.ajax({
+            url: favNumberURL,
+            method: "GET"
+        }).then(function(response){
+            var bHTMLHead = "<h4>Here's something about your favorite number!</h4>";
+            var data = response;
+            $(document.body).append(bHTMLHead,data);
+        })
+    })
+};
 
-$.ajax({
-    url: randomFactURL,
-    method: "GET"
-}).then(function(response){
-    // add functions for numbers!!
-    console.log(response);
-})
+function houseNumberFact(){
+    $(document).ready(function(){
+        houseNumber = $("#userHouseNum").val();
+        var houseNumberURL = "http://numbersapi.com/" + houseNumber + "/trivia";
+        $.ajax({
+            url: houseNumberURL,
+            method: "GET"
+        }).then(function(response){
+            var bHTMLHead = "<h4>Here's something about the number of your address!</h4>";
+            var data = response;
+            $(document.body).append(bHTMLHead,data);
+        })
+    })
+};
 
-$.ajax({
-    url: randomDateURL,
-    method: "GET"
-}).then(function(response){
-    // add functions for numbers!!
-    console.log(response);
-})
+function areaCodeFact(){
+    $(document).ready(function(){
+        areaCode = $("#userAreaCode").val();
+        var areaCodeURL = "http://numbersapi.com/" + areaCode + "/trivia";
+        $.ajax({
+            url: areaCodeURL,
+            method: "GET"
+        }).then(function(response){
+            var bHTMLHead = "<h4>Here's something about the number of your area code!</h4>";
+            var data = response;
+            $(document.body).append(bHTMLHead,data);
+        })
+    })
+};
 
-$.ajax({
-    url: movieURL,
-    method: "GET"
-}).then(function(response){
-    console.log(response);
-    // add functions for movies!!
-})
+function shoeSizeFact(){
+    $(document).ready(function(){
+        shoeSize = $("#userSize").val();
+        var shoeSizeURL = "http://numbersapi.com/" + shoeSize + "/trivia";
+        $.ajax({
+            url: shoeSizeURL,
+            method: "GET"
+        }).then(function(response){
+            var bHTMLHead = "<h4>Here's something that about the number of your shoe size!</h4>";
+            var data = response;
+            $(document.body).append(bHTMLHead,data);
+        })
+    })
+};
+
+
+
+
+birthdayFact();
+graduationFact();
+favoriteNumberFact();
+houseNumberFact();
+areaCodeFact();
+shoeSizeFact();
+
+});
+
+
