@@ -4,12 +4,22 @@ var favoriteNumber = "";
 var houseNumber = "";
 var areaCode = "";
 var shoeSize = "";
+var d = new Date();
+var month = d.getMonth()+1;
+var day = d.getDate();
+var todayURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + month + "/" + day +"/date"
 
-$(document).ready(function(){
-    $.ajax({
-        url
+function generateFactOfTheDay(){
+    $(document).ready(function(){
+        $.ajax({
+            url: todayURL,
+            method: "GET"
+        }).then(function(response){
+            $(".full-width-testimonial-text").text(response);
+        })
     })
-})
+}
+    
 
 $(".button").click(function generateFacts(e){
     e.preventDefault();
@@ -117,4 +127,4 @@ shoeSizeFact();
 
 });
 
-
+generateFactOfTheDay();
