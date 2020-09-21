@@ -5,7 +5,11 @@ var houseNumber = "";
 var areaCode = "";
 var shoeSize = "";
 
-
+$(document).ready(function(){
+    $.ajax({
+        url
+    })
+})
 
 $(".button").click(function generateFacts(e){
     e.preventDefault();
@@ -14,7 +18,7 @@ $(".button").click(function generateFacts(e){
 function birthdayFact(){
     $(document).ready(function(){
         userBirthDay = $("#userBirthday").val();
-        var birthdayURL = "http://numbersapi.com/" + userBirthDay +"/date";
+        var birthdayURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + userBirthDay +"/date";
         $.ajax({
             url: birthdayURL,
             method: "GET"
@@ -29,7 +33,7 @@ function birthdayFact(){
 function graduationFact(){
     $(document).ready(function(){
         graduationDate = $("#userGradYear").val();
-        var graduationURL = "http://numbersapi.com/" + graduationDate + "/year";
+        var graduationURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + graduationDate + "/year";
         $.ajax({
             url: graduationURL,
             method: "GET"
@@ -44,7 +48,7 @@ function graduationFact(){
 function favoriteNumberFact(){
     $(document).ready(function(){
         favoriteNumber = $("#userFavNum").val();
-        var favNumberURL = "http://numbersapi.com/" + favoriteNumber + "/trivia";
+        var favNumberURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + favoriteNumber + "/trivia";
         $.ajax({
             url: favNumberURL,
             method: "GET"
@@ -59,7 +63,7 @@ function favoriteNumberFact(){
 function houseNumberFact(){
     $(document).ready(function(){
         houseNumber = $("#userHouseNum").val();
-        var houseNumberURL = "http://numbersapi.com/" + houseNumber + "/trivia";
+        var houseNumberURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + houseNumber + "/trivia";
         $.ajax({
             url: houseNumberURL,
             method: "GET"
@@ -74,7 +78,7 @@ function houseNumberFact(){
 function areaCodeFact(){
     $(document).ready(function(){
         areaCode = $("#userAreaCode").val();
-        var areaCodeURL = "http://numbersapi.com/" + areaCode + "/trivia";
+        var areaCodeURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + areaCode + "/trivia";
         $.ajax({
             url: areaCodeURL,
             method: "GET"
@@ -89,7 +93,7 @@ function areaCodeFact(){
 function shoeSizeFact(){
     $(document).ready(function(){
         shoeSize = $("#userSize").val();
-        var shoeSizeURL = "http://numbersapi.com/" + shoeSize + "/trivia";
+        var shoeSizeURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + shoeSize + "/trivia";
         $.ajax({
             url: shoeSizeURL,
             method: "GET"
