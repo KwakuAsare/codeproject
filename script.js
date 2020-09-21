@@ -9,7 +9,7 @@ var shoeSize = "";
 
 $(".button").click(function generateFacts(e){
     e.preventDefault();
-    $(.Numbers).hide();
+    $(".Numbers").hide();
 
 function birthdayFact(){
     $(document).ready(function(){
