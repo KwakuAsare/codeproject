@@ -26,13 +26,6 @@ function generateFactOfTheDay(){
     })
 }
 
-//JS for the go-back button
-
-$("#go-back").click(function goBack(){
-    $(".Numbers").show();
-    $(".results").hide();
-});
-
 //JS for a button to generate a fun activity if the user is bored.
 
 $("#activity-button").click(function generateActivity(e){
@@ -48,16 +41,9 @@ $("#activity-button").click(function generateActivity(e){
 
 });
 
-//function to generate the facts relevant to the date, number or year the user inputs into the text boxes - needs to be made DRY, working on a way to generate using a FOR loop or similar method (perhaps data attributes for the date, year, etc for the URL generation).
-
-$("#Submit").click(function generateFacts(e){
-    e.preventDefault();
-    $(".Numbers").hide();
-    $(".results").show();
-
 //generates a fact about the user's birthday in History.
 
-function birthdayFact(){
+$("#bdaySubmit").click(function birthdayFact(){
     $(document).ready(function(){
         userBirthDay = $("#userBirthday").val();
         var birthdayURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + userBirthDay +"/date";
@@ -68,11 +54,11 @@ function birthdayFact(){
             $("#birthday-response").text(response);
         })
     })
-};
+});
 
 //generates a fact about the year the user graduated.
 
-function graduationFact(){
+$("#gradSubmit").click(function graduationFact(){
     $(document).ready(function(){
         graduationDate = $("#userGradYear").val();
         var graduationURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + graduationDate + "/year";
@@ -83,11 +69,11 @@ function graduationFact(){
             $("#graduation-response").text(response);
         })
     })
-};
+});
 
 //generates a fact about the user's birthday.
 
-function favoriteNumberFact(){
+$("#favSubmit").click(function favoriteNumberFact(){
     $(document).ready(function(){
         favoriteNumber = $("#userFavNum").val();
         var favNumberURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + favoriteNumber + "/trivia";
@@ -98,11 +84,11 @@ function favoriteNumberFact(){
             $("#Fav-Num-response").text(response);
         })
     })
-};
+});
 
 //generates a fact about the user's house number (so a fact about 1600 from 1600 Pennsylvania ave).
 
-function houseNumberFact(){
+$("#houseSubmit").click(function houseNumberFact(){
     $(document).ready(function(){
         houseNumber = $("#userHouseNum").val();
         var houseNumberURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + houseNumber + "/trivia";
@@ -113,11 +99,11 @@ function houseNumberFact(){
             $("#house-response").text(response);
         })
     })
-};
+});
 
 //generates a fact about the user's area code number.
 
-function areaCodeFact(){
+$("#areaSubmit").click(function areaCodeFact(){
     $(document).ready(function(){
         areaCode = $("#userAreaCode").val();
         var areaCodeURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + areaCode + "/trivia";
@@ -128,11 +114,11 @@ function areaCodeFact(){
             $("#area-code-response").text(response);
         })
     })
-};
+});
 
 //generates a fact about the user's shoe size.
 
-function shoeSizeFact(){
+$("#shoeSubmit").click(function shoeSizeFact(){
     $(document).ready(function(){
         shoeSize = $("#userSize").val();
         var shoeSizeURL = "https://cors-anywhere.herokuapp.com/http://numbersapi.com/" + shoeSize + "/trivia";
@@ -143,18 +129,11 @@ function shoeSizeFact(){
             $("#shoe-size-response").text(response);
         })
     })
-};
+});
 
 
 //call number generator functions.
 
-birthdayFact();
-graduationFact();
-favoriteNumberFact();
-houseNumberFact();
-areaCodeFact();
-shoeSizeFact();
-
-});
-
 generateFactOfTheDay();
+
+
