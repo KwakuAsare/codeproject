@@ -1,97 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-    
     <head>
         <meta charset="UTF-8">
         <title>Random Number & Day Facts!</title>
         <link rel="stylesheet" href="assets/css/foundation.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
-    
 
     <body>
-        <h1>Random Number & Day Facts!</h1>
-        <div class ="grid-x grid-padding-x">
-          <div class="large-12 cell">
-            <div class="primary callout">
-              <div class="full-width-testimonial">
-                <div class="full-width-testimonial-section">
-                  <div class="full-width-testimonial-content">
-                    <h5 class="full-width-testimonial-text">Lake Tahoe is the most beautiful place I have ever been to. I have traveled several places in the world, and there might be more beautiful places out there, but none that I have seen. I loved it!
-                    </h5>
-                  </div>
-                </div>
-              </div>
-              
-              <p><strong>Generate a random fact that identifies with each number that is significant to you!</p>
-              
-              <div id="activity-button">
-                <p>Press me for a fun activity to do!</p>
-                <p id= "activity-text"></p>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-          <div class="flip-card-inner">
-            <div class="flip-card-inner-front">
-              <span>BORED?</span>
-            </div>
-            <div class="flip-card-inner-back">
-              
-            <a href="#" id= "activity-button" class="success button">Find something to do</a>
-            </p id= "activity-text">
-
-            </div>
-          </div>
-        </div>
-        
-          <div class="large-4 large-4 large-centered text-center">
-          <p><strong>Generate a random fact that identifies with each number that is significant to you!</p>
-          </div>
-        
-        <div class= "Numbers" >
-
-     
-          <div class="grid-x grid-padding-x">
-          <div class="large-4 medium-4 medium-centered">
-            <label>Birthday</label> 
-            <input type="text" id= "userBirthday" placeholder="MM/DD" />
-          
-          </div>
-          <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 medium-centered">
-                <label>Graduation Year</label>
-                <input type="text" id="userGradYear" placeholder="YYYY" />
-              </div>
-              <div class="grid-x grid-padding-x">
-                <div class="large-4 medium-4 medium-centered">
-                  <label>Favorite Number</label>
-                  <input type="text" id="userFavNum" placeholder="#" />
-                </div>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-4 medium-4 medium-centered">
-                    <label>House Number</label>
-                    <input type="text" id="userHouseNum" placeholder="###" />
-                  </div>
-                  <div class="grid-x grid-padding-x">
-                    <div class="large-4 medium-4 medium-centered">
-
-                      <label>Cellphone Area Code</label>
-                      <input type="text" id="userAreaCode" placeholder="###" />
+        <h1 id="main-title">Random Number & Day facts!</h1>
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <div class="primary callout">
+                    <div class="full-width-testimonial"></div>
+                    <div class="full-width-testimonial-section"></div>
+                    <div class="full-width-testimonial-content">
+                        <h4> Fact of the Day!</h4>
+                        <h5 class="full-width-testimonial-text"></h5>
                     </div>
-                    <div class="grid-x grid-padding-x">
-                      <div class="large-4 medium-4 medium-centered">
-                        <label>Shoe Size</label>
-                        <input type="text" id="userSize "placeholder="#" />
-                      </div>
-                      <div class="grid-x grid-padding-x">
-                        <div class="large-4 medium-4 medium-centered">
-                        
-                          
-                          <p><a href="#" id="Submit" class="button">Submit</a><br/>
+                </div>
+            </div>
         </div>
+
+        <div class="Numbers">
+
+            <div class="large-4 large-4 large-centered text center">
+                <p><strong>Generate a random fact that identifies with each number that is significant to you!</strong></p>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 medium-centered">
+                    <label>Birthday</label>
+                    <input type="text" id="userBirthday" placeholder="MM/DD">
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 medium-centered">
+                    <label>Graduation Year</label>
+                    <input type="text" id="userGradYear" placeholder="YYYY">
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 medium-centered">
+                    <label>Favorite Number</label>
+                    <input type="text" id="userFavNum" placeholder="###">
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 medium-centered">
+                    <label>House Number</label>
+                    <input type="text" id="userHouseNum" placeholder="###">
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 medium-centered">
+                    <label>Cellphone Area Code</label>
+                    <input type="text" id="userAreaCode" placeholder="###">
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 medium-centered">
+                    <label>Shoe Size</label>
+                    <input type="text" id="userSize" placeholder="###">
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 medium-centered">
+                    <button type="button" class="button" id="Submit">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results">
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-6 medium-6 medium-centered">
+                    <h4>Here's something that happened on your birthday in History!</h4>
+                    <p id="birthday-response">Sample</p>
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-6 medium-6 medium-centered">
+                    <h4>Here's something that happened the year you graduated!</h4>
+                    <p id="graduation-response">Sample</p>
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-6 medium-6 medium-centered">
+                    <h4>Here's something about your favorite number!</h4>
+                    <p id="Fav-Num-response">Sample</p>
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-6 medium-6 medium-centered">
+                    <h4>Here's something about your house number!</h4>
+                    <p id="house-response">Sample</p>
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-6 medium-6 medium-centered">
+                    <h4>Here's something about your area code number!</h4>
+                    <p id="area-code-response">Sample</p>
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-6 medium-6 medium-centered">
+                    <h4>Here's something about your shoe size!</h4>
+                    <p id="shoe-size-response">Sample</p>
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="large-6 medium-6 medium-centered">
+                    <button type="button" class="button" id="go-back">Try some more numbers</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src= "./script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
