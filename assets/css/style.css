@@ -9,3 +9,64 @@
 .results{
 display:none;
 }
+.success1 {
+    color: black;
+    background-color: #f7f9fb;
+}
+
+.bdlabel {
+    color: #f2eeed;
+}
+
+.fact {
+    border: 1px solid black;
+    
+}
+#main-title {
+    color: #9facbd;
+    background-color: black;
+    
+    
+}
+#main-title span {
+    color: #007bff;
+}
+.gen {
+    color: #545352;
+    background-color: #f8e9a1;
+}
+.full-width-testimonial-text {
+    color: #f0ebeb;
+    background-color: #a22b22;
+}
+.topbox {
+    color: #f2eeed;
+    background-color: #17252a;
+}
+.alert {
+    background-color: #2b7a78;
+}
+.warning {
+    background-color: #f0ad4e;
+}
+
+.info {
+    background-color: #def2f1;
+}
+
+.primary {
+    background-color: #8fc1e3;
+}
+.secondary {
+    color: #f2eeed;
+    background-color: #374785;
+}
+.birthbox {
+    background-color: #4e4e50;
+}
+html, body {
+    background-color: #E6E6E6;
+}
+.button {
+    background-color: #a22b22;
+}
